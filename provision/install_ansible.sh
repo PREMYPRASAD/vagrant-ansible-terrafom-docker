@@ -298,7 +298,7 @@ cat <<'EOF' >  /home/vagrant/ansible/install_github_runner.yml
     - name: Ensure runner service is running
       assert:
         that:
-          - "'is running' in runner_status.stdout"
+          - "'active (running)' in runner_status.stdout"
         fail_msg: "GitHub Actions runner service is not running"
         success_msg: "GitHub Actions runner service is running"
 EOF
